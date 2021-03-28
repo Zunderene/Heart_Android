@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/heat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/Fecha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="FECHA------------------"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/black"></TextView>
+
+            <TextView
+                android:id="@+id/Status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Fecha"
+                android:text="STATUS"
+                android:textAppearance="?android:attr/textAppearance" />
+
+        </RelativeLayout>
+
+
+    <ImageView
+        android:id="@+id/Dys"
+        android:layout_width="53dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_toEndOf="@+id/heat"
+        android:layout_toRightOf="@+id/heat"
+        tools:srcCompat="@tools:sample/avatars">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/Sys"
+        android:layout_width="53dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_toEndOf="@+id/Dys"
+        android:layout_toRightOf="@+id/Dys"
+        tools:srcCompat="@tools:sample/avatars">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/Pul"
+        android:layout_width="53dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_toEndOf="@+id/Sys"
+        android:layout_toRightOf="@+id/Sys"
+        tools:srcCompat="@tools:sample/avatars">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/TDYS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Dys"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="-20dp"
+        android:layout_toEndOf="@+id/heat"
+        android:layout_toRightOf="@+id/heat"
+        android:alpha="1"
+        android:cursorVisible="false"
+        android:text="100">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/TSYS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Sys"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="-20dp"
+        android:layout_toEndOf="@+id/Dys"
+        android:layout_toRightOf="@+id/Dys"
+        android:alpha="1"
+        android:cursorVisible="false"
+        android:text="100">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/TPUL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Pul"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="-20dp"
+        android:layout_toEndOf="@+id/Sys"
+        android:layout_toRightOf="@+id/Sys"
+        android:alpha="1"
+        android:cursorVisible="false"
+        android:text="100">
+
+    </TextView>
+
+
+</RelativeLayout>
+

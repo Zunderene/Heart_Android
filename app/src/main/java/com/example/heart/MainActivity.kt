@@ -1,23 +1,49 @@
 package com.example.heart
 
 import android.os.Bundle
-import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.AdapterView
+import android.widget.ListView
+import androidx.appcompat.widget.Toolbar
+import com.example.hear.DataSet
+import com.example.heart.Model.DataModel
 
 class MainActivity : AppCompatActivity() {
+    lateinit var listView:ListView
+    lateinit var Models:ArrayList<DataModel>
+
+    companion object {
+        lateinit var adapter:DataSet
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val toolbar: Toolbar = findViewById(R.id.toolbar)
+        setSupportActionBar(toolbar)
+
+        listView = findViewById(R.id.list)
+        val dataM = ArrayList<DataModel>()
+
+        dataM.add(DataModel(90,150,50))
+        dataM.add(DataModel(90,150,50))
+        dataM.add(DataModel(90,150,50))
+        dataM.add(DataModel(90,150,50))
+
+        adapter = DataSet(dataM, applicationContext)
+        listView.adapter = adapter
+
+
+
+        /*
         setSupportActionBar(findViewById(R.id.toolbar))
 
         findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
-        }
+        }*/
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
