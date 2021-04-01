@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_dark_background"
+    tools:context="heart.NewHeart">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="52dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_margin="5dp"
+            android:text="Sys mmhg"
+            android:textColor="@color/white"
+            android:textSize="32sp" />
+
+        <EditText
+            android:id="@+id/editsys"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_margin="5dp"
+            android:textSize="22sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Dys mmhg"
+            android:layout_margin="5dp"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/editdys"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Pulsaciones"
+            android:textSize="32sp"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"/>
+
+        <EditText
+            android:id="@+id/editpul"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="number"
+            android:layout_margin="5dp"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Insertar" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

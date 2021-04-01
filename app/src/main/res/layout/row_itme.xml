@@ -2,9 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="10dp">
+    android:id="@+id/row"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:alpha="1">
 
         <RelativeLayout
             android:id="@+id/heat"
@@ -16,85 +18,79 @@
                 android:id="@+id/Fecha"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="FECHA------------------"
+                android:text="20/10/2021 18:25"
                 android:textAppearance="?android:attr/textAppearanceSmall"
-                android:textColor="@color/black"></TextView>
+                android:textColor="@color/white" />
 
             <TextView
                 android:id="@+id/Status"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/Fecha"
-                android:text="STATUS"
+                android:text="Normal"
+                android:textColor="@color/white"
                 android:textAppearance="?android:attr/textAppearance" />
 
         </RelativeLayout>
 
 
     <ImageView
-        android:id="@+id/Dys"
-        android:layout_width="53dp"
-        android:layout_height="38dp"
+        android:id="@+id/Sys"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:layout_marginStart="21dp"
-        android:layout_marginLeft="21dp"
         android:layout_toEndOf="@+id/heat"
-        android:layout_toRightOf="@+id/heat"
-        tools:srcCompat="@tools:sample/avatars">
+        tools:srcCompat="@drawable/img_alt"
+        android:contentDescription="TODO">
 
     </ImageView>
 
     <ImageView
-        android:id="@+id/Sys"
-        android:layout_width="53dp"
-        android:layout_height="38dp"
+        android:id="@+id/Dys"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:layout_marginStart="21dp"
-        android:layout_marginLeft="21dp"
-        android:layout_toEndOf="@+id/Dys"
-        android:layout_toRightOf="@+id/Dys"
-        tools:srcCompat="@tools:sample/avatars">
+        android:layout_toEndOf="@+id/Sys"
+        tools:srcCompat="@drawable/img_alt"
+        android:contentDescription="TODO">
 
     </ImageView>
 
     <ImageView
         android:id="@+id/Pul"
-        android:layout_width="53dp"
-        android:layout_height="38dp"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
         android:layout_marginStart="21dp"
-        android:layout_marginLeft="21dp"
-        android:layout_toEndOf="@+id/Sys"
-        android:layout_toRightOf="@+id/Sys"
-        tools:srcCompat="@tools:sample/avatars">
+        android:layout_toEndOf="@+id/Dys"
+        tools:srcCompat="@drawable/img_alt"
+        >
 
     </ImageView>
-
-    <TextView
-        android:id="@+id/TDYS"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/Dys"
-        android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="-20dp"
-        android:layout_toEndOf="@+id/heat"
-        android:layout_toRightOf="@+id/heat"
-        android:alpha="1"
-        android:cursorVisible="false"
-        android:text="100">
-
-    </TextView>
 
     <TextView
         android:id="@+id/TSYS"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Sys"
+        android:layout_below="@+id/Dys"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
         android:layout_marginTop="-20dp"
-        android:layout_toEndOf="@+id/Dys"
-        android:layout_toRightOf="@+id/Dys"
+        android:layout_toEndOf="@+id/heat"
         android:alpha="1"
-        android:cursorVisible="false"
+        android:textColor="@color/white"
+        android:text="100">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/TDYS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Pul"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="-20dp"
+        android:layout_toEndOf="@+id/Sys"
+        android:alpha="1"
+        android:textColor="@color/white"
         android:text="100">
 
     </TextView>
@@ -103,14 +99,12 @@
         android:id="@+id/TPUL"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/Pul"
+        android:layout_below="@+id/Sys"
         android:layout_marginStart="50dp"
-        android:layout_marginLeft="50dp"
         android:layout_marginTop="-20dp"
-        android:layout_toEndOf="@+id/Sys"
-        android:layout_toRightOf="@+id/Sys"
+        android:layout_toEndOf="@+id/Dys"
         android:alpha="1"
-        android:cursorVisible="false"
+        android:textColor="@color/white"
         android:text="100">
 
     </TextView>
