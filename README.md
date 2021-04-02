@@ -1,6 +1,9 @@
 # App registro de tension en Android.
 _Aplicacion de android que permite mantener un registro de las mediciones de presion arterial de un unico usuario._
 
+![01](https://user-images.githubusercontent.com/19290739/113450602-8491f180-9400-11eb-8303-c18cf2b5952b.PNG)
+![02](https://user-images.githubusercontent.com/19290739/113450628-8f4c8680-9400-11eb-873b-8df6ce20a45a.PNG)
+
 ### Aviso importante. :warning:
 _Los datos mostrados (iconos y el mensage del estado )nunca debe ser usados como diagnostico del estado de su tension arterial, para mas información consulte a su medico en caso de no estar seguro. En futuras versiones esta forma de medir la calidad de la tension sera mejorada._
 
