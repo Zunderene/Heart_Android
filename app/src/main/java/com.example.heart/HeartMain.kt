@@ -51,14 +51,6 @@ class HeartMain : AppCompatActivity() {
                 val ad = recyclerView.adapter as HeatListAdapter
                 val ob = ad.currentList[viewHolder.adapterPosition]
                 hVM.delete(ob)
-                ad.notifyItemChanged(viewHolder.adapterPosition)
-                var i = 0
-                while (recyclerView.size > i){
-                    if(i % 2 == 0 || i == 0)recyclerView[i].setBackgroundColor(Color.GRAY)
-                    else recyclerView[i].setBackgroundColor(Color.DKGRAY)
-                    i = i + 1
-                }
-
             }
         }
 
@@ -79,7 +71,7 @@ class HeartMain : AppCompatActivity() {
         var sys:String = "0"
         var dys:String = "0"
         var pul:String = "0"
-        var IDESTR = arrayOf("Bajo", "Normal", "Normal Alto", "Muy Alto")
+        val IDESTR = arrayOf("Bajo", "Normal", "Normal Alto", "Muy Alto")
 
         if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK && intentData != null) {
             intentData.getStringExtra(EXTRA_REPLY)?.let { reply ->
@@ -88,7 +80,6 @@ class HeartMain : AppCompatActivity() {
                         0 -> sys = v
                         1 -> dys = v
                         2 -> pul = v
-
                     }
                 }
             }

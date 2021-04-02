@@ -41,9 +41,6 @@ class HeatListAdapter : ListAdapter<BD_Heart, HeatListAdapter.HeartViewHolder>(H
         private val IPUL: ImageView = itemView.findViewById(R.id.Pul)
         private val row: RelativeLayout = itemView.findViewById(R.id.row)
 
-        fun delete(position: Int){
-
-        }
 
         fun bind(Heart:BD_Heart, position: Int) {
             SYS.text = Heart.SYS.toString()
@@ -53,7 +50,6 @@ class HeatListAdapter : ListAdapter<BD_Heart, HeatListAdapter.HeartViewHolder>(H
             SAV.text = Heart.SAV
             IPUL.setImageResource(R.drawable.img_pul)
 
-            if(position % 2 == 0 || position == 0)row.setBackgroundColor(Color.GRAY)
 
             when(Heart.SYS){
                in 0..99 -> ISYS.setImageResource(id_img[3])
@@ -75,10 +71,6 @@ class HeatListAdapter : ListAdapter<BD_Heart, HeatListAdapter.HeartViewHolder>(H
                 val view: View = LayoutInflater.from(parent.context)
                         .inflate(R.layout.row_itme, parent, false)
                 return HeartViewHolder(view)
-            }
-
-            fun update(parent: ViewGroup, position: Int) {
-                if(position % 2 == 0 && position == 0)parent.setBackgroundColor(Color.GRAY)
             }
         }
     }

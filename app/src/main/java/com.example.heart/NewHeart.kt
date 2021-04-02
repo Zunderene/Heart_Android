@@ -26,9 +26,6 @@ class NewHeart : AppCompatActivity(){
                 setResult(Activity.RESULT_CANCELED, replyIntent)
             } else {
                 replyIntent.putExtra(EXTRA_REPLY, ("" + editSys.text + "/" + editDys.text + "/" + editPul.text))
-                //replyIntent.putExtra(NewHeart.hashCode(), editSys.text)
-                //replyIntent.putExtra(EXTRA_REPLY, editDys.text)
-                //replyIntent.putExtra(EXTRA_REPLY, editPul.text)
                 setResult(Activity.RESULT_OK, replyIntent)
             }
             finish()
